@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="62j-SQ-QME">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7cW-YQ-tbu">
+            <objects>
+                <navigationController id="62j-SQ-QME" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wVd-o1-G1L">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ORh-MR-TaW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfq-Ui-quD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-826" y="124"/>
+        </scene>
+        <!--Main Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hw_8_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-Jw-air">
+                                <rect key="frame" x="147" y="238" width="120" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Tap Game">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="dL9-W7-vrQ" kind="push" id="rV3-aP-KAP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebk-16-rVK">
+                                <rect key="frame" x="140" y="626.5" width="134" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Swipe Game">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VlK-uT-AmW" kind="push" id="grb-ff-PQW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.41363706125328653" green="0.86078917980194092" blue="0.85398821959672788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ndO-Jw-air" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whf-Q3-dN7"/>
+                            <constraint firstItem="ebk-16-rVK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kKQ-aT-zIK"/>
+                            <constraint firstItem="ndO-Jw-air" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="qXm-63-iMB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ebk-16-rVK" secondAttribute="bottom" constant="200" id="t5A-ph-2Sg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Screen" id="0Mq-Jy-zC8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="124"/>
+        </scene>
+        <!--Swap Game-->
+        <scene sceneID="s5S-BB-SsH">
+            <objects>
+                <viewController id="VlK-uT-AmW" customClass="SecondTackViewController" customModule="Hw_8_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75f-9U-Q3j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZX-Yd-d1T">
+                                <rect key="frame" x="87" y="336" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bE4-nn-YeW" appends="YES" id="xg4-4u-iwY"/>
+                                    <outletCollection property="gestureRecognizers" destination="uvS-M7-FTW" appends="YES" id="AfF-jL-1kD"/>
+                                    <outletCollection property="gestureRecognizers" destination="fpr-7n-Mpk" appends="YES" id="8lo-uG-5bc"/>
+                                    <outletCollection property="gestureRecognizers" destination="afy-1T-S2W" appends="YES" id="gpf-6Q-lh4"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="voR-c4-Hmh"/>
+                        <color key="backgroundColor" red="0.70136514064033872" green="0.73154374806299582" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.94638515682613888" green="0.56799283037733861" blue="0.96841138601303101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swap Game" id="JA0-I9-7yb">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="QSR-Em-gPF">
+                            <connections>
+                                <action selector="Close:" destination="VlK-uT-AmW" id="zpU-Bu-XGs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="catToy" destination="JZX-Yd-d1T" id="JgD-b6-wRr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRW-24-DvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="bE4-nn-YeW">
+                    <connections>
+                        <action selector="swipe:" destination="VlK-uT-AmW" id="RLH-WC-2fX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="fpr-7n-Mpk">
+                    <connections>
+                        <action selector="swipe:" destination="VlK-uT-AmW" id="JO0-DN-kVP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="afy-1T-S2W">
+                    <connections>
+                        <action selector="swipe:" destination="VlK-uT-AmW" id="d64-M5-hlh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="uvS-M7-FTW">
+                    <connections>
+                        <action selector="swipe:" destination="VlK-uT-AmW" id="gRN-cv-htr"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1030" y="577"/>
+        </scene>
+        <!--Tap Game-->
+        <scene sceneID="cEO-EN-fmG">
+            <objects>
+                <viewController id="dL9-W7-vrQ" customClass="FirstTaskViewController" customModule="Hw_8_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5SP-ib-05r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WuM-FS-Vc3"/>
+                        <color key="backgroundColor" red="0.96841138601303101" green="0.95756184314485115" blue="0.5272865109545386" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TB4-b2-dbi" appends="YES" id="8hU-45-j1g"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tap Game" id="mTY-cR-3m3">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="BXA-xW-fiq">
+                            <connections>
+                                <action selector="Close:" destination="dL9-W7-vrQ" id="XTu-Lv-ZaS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfT-gE-eXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TB4-b2-dbi">
+                    <connections>
+                        <action selector="tap:" destination="dL9-W7-vrQ" id="nbj-Yc-PK1"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
